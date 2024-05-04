@@ -1,5 +1,4 @@
 return {
-
 	{
 		"williamboman/mason-lspconfig.nvim",
 
@@ -40,16 +39,18 @@ return {
 			})
 
 			local cmp = require('cmp')
-			local cmp_format = require('lsp-zero').cmp_format({details = true})
-
 			cmp.setup({
 				sources = {
 					{ name = 'luasnip' },
 					{ name = 'nvim_lsp' },
 					{ name = 'path' }
 				},
+				-- A mapping chinchin would probably like.
+				-- reference: https://lsp-zero.netlify.app/v3.x/autocomplete.html
+				mapping = {
+					['<Tab>'] = cmp.mapping.confirm({select = true})
+				}
 			})
 		end
 	},
-
 }
