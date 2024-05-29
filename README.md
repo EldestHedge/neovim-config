@@ -1,6 +1,9 @@
-# My Nvim setup
-> Big thanks to abql, I couldn't have done it without you. Well, that's not entirely true, but we both know how long it would have taken otherwise >:3 
+# My Nvim Setup
+
+Big thanks to Rainswolf--I couldn't have done it without you.
+You are so very epic and unbelievably humble.
 
 ## Requirements
-Neovim >= 0.8.0 (needs to be built with LuaJIT)
-Git >= 2.19.0 (for partial clones support)
+
+- Neovim >= 0.8.0 (needs to be built with LuaJIT)
+- Git >= 2.19.0 (for partial clones support)

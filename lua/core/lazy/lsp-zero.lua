@@ -39,6 +39,9 @@ return {
 			})
 
 			local cmp = require('cmp')
+			local luasnip = require('cmp')
+			local cmp_action = require('lsp-zero').cmp_action()
+
 			cmp.setup({
 				sources = {
 					{ name = 'luasnip' },
@@ -47,9 +50,11 @@ return {
 				},
 				-- A mapping chinchin would probably like.
 				-- reference: https://lsp-zero.netlify.app/v3.x/autocomplete.html
-				mapping = {
-					['<Tab>'] = cmp.mapping.confirm({select = true})
-				}
+				mapping = cmp.mapping.preset.insert({
+					['<CR>'] = cmp.mapping.confirm({select = false}),
+					['<Tab>'] = cmp_action.tab_complete(),
+					['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
+				}),
 			})
 		end
 	},
